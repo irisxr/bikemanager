@@ -31,7 +31,7 @@
       prop="action"
       label="操作">
       <template slot-scope="scope">
-          <router-link to="{path:'/bikesDetail'}">
+          <router-link :to="{path:'/bikesDetail'}">
              <el-button  size="small">查看</el-button>
           </router-link>
         <el-button type="danger" size="small" @click="handleDelete(scope.$index,tableData3)">删除</el-button>
@@ -105,7 +105,7 @@ export default {
           page_size: this.pagination.per_page
         }
       };
-      getUsersUrl(obj).then(res => {
+      getBikesUrl(obj).then(res => {
         (this.tableData3 = res.data.data),
           (this.pagination = res.data.meta.pagination);
       });

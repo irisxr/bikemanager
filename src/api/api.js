@@ -11,21 +11,21 @@ const baseUrl = 'https://wx.douyoucai.com/api'
 axios.interceptors.response.use(function (response) {
   return response;
 }, function (error) {
-  let message = ''
-  switch (error.response.status) {
-    case 401:
-      message: '授权错误'
-      router.push({
-        path: '/login'
-      })
-      break;
-  }
-  Notification({
-    title: '出错了',
-    type: 'error',
-    message: message
-  })
-  return Promise.reject(error);
+  // let message = ''
+  // switch (error.response.status) {
+  //   case 401:
+  //     message: '授权错误'
+  //     router.push({
+  //       path: '/login'
+  //     })
+  //     break;
+  // }
+  // Notification({
+  //   title: '出错了',
+  //   type: 'error',
+  //   message: message
+  // })
+  // return Promise.reject(error);
 });
 
 export const loginUserUrl = params => {

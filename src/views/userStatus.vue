@@ -17,7 +17,7 @@ export default {
   methods: {
     getUserCharts() {
       getUserDataUrl().then(res => {
-        this.item = res.data;
+        // this.item = res.data;
         this.drawLineData();
       });
     },

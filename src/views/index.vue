@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <el-menu
-  :default-active="home" router="true"
+  :default-active="home" :router="true"
   class="el-menu-demo"
   mode="horizontal"
  >
